@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIST - Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">MIST</div>
+        <div class="nav-buttons">
+            <a href="index.html" class="nav-btn active">Home</a>
+            <a href="glazing.html" class="nav-btn">Glazing MIST</a>
+            <a href="about.html" class="nav-btn">About Us</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="image-grid">
+            <div class="image-card">
+                <img src="images/image1.jpg" alt="Image 1" class="card-image">
+                <p class="image-description">Your first image description</p>
+            </div>
+            <div class="image-card">
+                <img src="images/image2.jpg" alt="Image 2" class="card-image">
+                <p class="image-description">Your second image description</p>
+            </div>
+            <div class="image-card">
+                <img src="images/image3.jpg" alt="Image 3" class="card-image">
+                <p class="image-description">Your third image description</p>
+            </div>
+        </div>
+
+        <div class="button-section">
+            <button class="play-button" id="playButton">
+                <span class="button-text">click me</span>
+            </button>
+            <div class="message" id="message">YOU CLICKED THE BUTTON YAYYY!!!</div>
+        </div>
+
+        <p class="instruction">(on clicking the button, the text on the right appears<br>and on clicking the button again, it disappears)</p>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
