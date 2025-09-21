@@ -5,6 +5,113 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MIST - Glazing</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Four Images Layout Styles */
+        .glazing-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 80vh;
+            padding: 40px 20px;
+        }
+        
+        .four-images-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-bottom: 40px;
+            max-width: 800px;
+            width: 100%;
+        }
+        
+        .image-direction {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 20px;
+            transition: transform 0.3s ease;
+        }
+        
+        .image-direction:hover {
+            transform: scale(1.05);
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        .direction-image {
+            width: 250px;
+            height: 200px;
+            object-fit: contain;
+            background: white;
+            border-radius: 10px;
+            padding: 10px;
+            margin-bottom: 15px;
+            transition: transform 0.3s ease;
+        }
+        
+        .direction-image.normal {
+            transform: rotate(0deg);
+        }
+        
+        .direction-image.rotate-90 {
+            transform: rotate(90deg);
+        }
+        
+        .direction-image.rotate-180 {
+            transform: rotate(180deg);
+        }
+        
+        .direction-image.rotate-270 {
+            transform: rotate(270deg);
+        }
+        
+        .direction-label {
+            color: #ff6b35;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-align: center;
+        }
+        
+        .glazing-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #ccc;
+            max-width: 600px;
+            line-height: 1.5;
+            margin-top: 20px;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .four-images-container {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .direction-image {
+                width: 200px;
+                height: 160px;
+            }
+            
+            .glazing-subtitle {
+                font-size: 1rem;
+                padding: 0 20px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .direction-image {
+                width: 180px;
+                height: 140px;
+            }
+            
+            .image-direction {
+                padding: 15px;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -17,19 +124,30 @@
         </div>
     </nav>
 
-    <!-- Glazing Content -->
+    <!-- Four Directional Images -->
     <main class="glazing-content">
-        <div class="mist-display">
-            <div class="mist-text">MIST</div>
-            <div class="mist-icons">
-                <div class="icon-item">🎯</div>
-                <div class="icon-item">⚡</div>
-                <div class="icon-item">💫</div>
-                <div class="icon-item">🔥</div>
-                <div class="icon-item">⭐</div>
+        <div class="four-images-container">
+            <div class="image-direction">
+                <img src="images/image1.png" alt="MIST Normal" class="direction-image normal">
+                <p class="direction-label">Normal</p>
+            </div>
+            <div class="image-direction">
+                <img src="images/image1.png" alt="MIST Rotated 90°" class="direction-image rotate-90">
+                <p class="direction-label">Rotate 90°</p>
+            </div>
+            <div class="image-direction">
+                <img src="images/image1.png" alt="MIST Rotated 180°" class="direction-image rotate-180">
+                <p class="direction-label">Rotate 180°</p>
+            </div>
+            <div class="image-direction">
+                <img src="images/image1.png" alt="MIST Rotated 270°" class="direction-image rotate-270">
+                <p class="direction-label">Rotate 270°</p>
             </div>
         </div>
-        <p class="glazing-subtitle">USE GPT AND GLAZE MIST FOR ATLEAST 2 PARAGRAPHS</p>
+        
+        <p class="glazing-subtitle">GLAZW is the official cybersecurity club of MIST, born from a shared passion for digital defense, ethical hacking, and cyber awareness. We’re a community of curious minds—coders, analysts, and puzzle-solvers—who thrive on protecting systems and decoding vulnerabilities. From beginner-friendly workshops on Linux and cryptography to advanced CTFs and red-blue team simulations, GLAZW empowers students to explore the full spectrum of cybersecurity. Our motto? Learn, Hack, Secure.
+Beyond technical mastery, GLAZW is a movement to foster cyber hygiene across campus. We host awareness campaigns, guest lectures by industry experts, and collaborative projects that tackle real-world threats—from phishing to data breaches. Whether you're a seasoned hacker or just cyber-curious, GLAZW offers a safe, inclusive space to grow, experiment, and contribute to a digitally secure future. Join us, and let’s make MIST a fortress of cyber resilience.
+</p>
     </main>
 
     <script src="script.js"></script>
